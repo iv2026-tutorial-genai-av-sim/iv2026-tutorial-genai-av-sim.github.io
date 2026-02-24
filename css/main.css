@@ -1,5 +1,5 @@
 ul.navbar-nav {
-  font-size: 15px;
+  font-size: 17px;
 }
 @media (max-width:1000px) {
 	ul.navbar-nav {
@@ -10,8 +10,8 @@ ul.navbar-nav {
 }
 
 body {
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: 300;
   -webkit-font-smoothing: subpixel-antialiased;
   color: #333;
@@ -24,7 +24,7 @@ body *::selection {
 }
 
 .container {
-  max-width: 980px;
+  max-width: 1200px;
 }
 
 .top-strip {
@@ -41,20 +41,20 @@ h1,h2,h3 {
 
 h1 {
   margin: 0 0 10px;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 36px;
+  line-height: 42px;
 }
 
 h2 {
   margin: 0 0 10px;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 36px;
 }
 
 h3 {
   margin: 0;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .page-header {
@@ -149,9 +149,9 @@ div.speaker p.speaker-bio {
 }
 
 .people-pic {
-  max-width: 125px;
-  max-height: 125px;
-  border-radius: 125px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 200px;
 }
 
 .people-name {
@@ -285,6 +285,7 @@ span.award-other img {
 .table.schedule tr td {
   padding-top: 0;
   padding-bottom: 8px;
+  font-size: 18px;
 }
 
 div.paper {
