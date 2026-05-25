@@ -31,48 +31,27 @@
 
   <style>
     .iv-banner {
-      background: linear-gradient(135deg, #003087 0%, #005EB8 50%, #0077CC 100%);
-      color: #fff;
-      padding: 40px 30px;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      padding: 28px 30px;
       border-radius: 6px;
       margin-bottom: 10px;
     }
-    .iv-banner .conf-label {
-      font-size: 15px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      opacity: 0.85;
-      margin-bottom: 4px;
-    }
-    .iv-banner .conf-title {
-      font-size: 42px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin: 0 0 4px;
-    }
-    .iv-banner .conf-meta {
-      font-size: 16px;
-      opacity: 0.9;
-      margin-bottom: 18px;
-    }
     .iv-banner .tutorial-badge {
       display: inline-block;
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.5);
+      background: #003087;
+      color: #fff;
       border-radius: 20px;
       padding: 4px 16px;
       font-size: 14px;
       letter-spacing: 1px;
+      margin-top: 12px;
     }
     .iv-logos {
       display: flex;
       align-items: center;
-      gap: 18px;
-      margin-bottom: 20px;
-    }
-    .iv-logos img {
-      height: 52px;
-      filter: brightness(0) invert(1);
+      gap: 20px;
+      margin-bottom: 12px;
     }
     .session-tag {
       display: inline-block;
@@ -156,11 +135,14 @@
   <div class="col-xs-12">
     <div class="iv-banner">
       <div class="iv-logos">
-        <img src="./img/cvpr-navbar-logo.svg" alt="IEEE" style="height:40px; filter:brightness(0) invert(1);" />
+        <img src="./img/itss-logo.png" alt="IEEE ITSS" style="height:72px;" />
+        <div style="border-left:2px solid #ccc; height:60px; margin:0 4px;"></div>
+        <div>
+          <div style="font-size:13px; color:#555; letter-spacing:1px; text-transform:uppercase;">IEEE Intelligent Vehicles Symposium</div>
+          <div style="font-size:38px; font-weight:700; color:#003087; line-height:1.1;">IV 2026</div>
+          <div style="font-size:14px; color:#555;">Detroit, MI, United States &nbsp;&middot;&nbsp; June 22&ndash;25, 2026</div>
+        </div>
       </div>
-      <div class="conf-label">IEEE Intelligent Vehicles Symposium</div>
-      <div class="conf-title">IV 2026</div>
-      <div class="conf-meta">Detroit, MI, United States &nbsp;&middot;&nbsp; June 22&ndash;25, 2026</div>
       <span class="tutorial-badge">Half-Day Tutorial &nbsp;&middot;&nbsp; In-Person</span>
     </div>
   </div>
@@ -182,10 +164,10 @@
 <h2>Overview</h2>
 <br/>
 <p>
-  The organizers are pleased to propose a tutorial on <strong>Generative AI–Driven Simulation for Autonomous Vehicle Testing</strong>, to be hosted at the IEEE Intelligent Vehicles Symposium 2026. This tutorial will introduce TeraSim, a generative-AI–driven platform that automatically constructs city-scale digital twins for scalable, safety-critical testing of autonomous vehicles (AVs) before physical deployment.
+  The organizers are pleased to propose a tutorial on Generative AI–Driven Simulation for Autonomous Vehicle Testing, to be hosted at the IEEE Intelligent Vehicles Symposium 2026. This tutorial will introduce TeraSim, a generative-AI–driven platform that automatically constructs city-scale digital twins for scalable, safety-critical testing of autonomous vehicles (AVs) before physical deployment.
 </p>
 <p>
-  Unlike conventional on-road testing and replay-based simulators that are costly, unsafe, and limited in diversity, TeraSim leverages foundation models and large-scale data to generate realistic, continuously evolving virtual environments. The tutorial will feature invited talks from both academia and industry, highlighting TeraSim's core components, including: 1) <strong>cityNDE</strong>, which learns long-term, naturalistic city-scale driving behaviors; 2) <strong>Adversity orchestrator</strong>, which synthesizes rare but safety-critical scenarios guided by real-world crash data and multi-modal large language models; 3) <strong>Sensor simulation</strong> like Cosmos-Drive, a world foundation model enabling photorealistic multi-view driving video generation. Use cases from academic and industrial partners (e.g., Bot Auto, Parallel Domain) will also be presented.
+  Unlike conventional on-road testing and replay-based simulators that are costly, unsafe, and limited in diversity, TeraSim leverages foundation models and large-scale data to generate realistic, continuously evolving virtual environments. The tutorial will feature invited talks from both academia and industry, highlighting TeraSim's core components, including: 1) cityNDE, which learns long-term, naturalistic city-scale driving behaviors; 2) Adversity orchestrator, which synthesizes rare but safety-critical scenarios guided by real-world crash data and multi-modal large language models; 3) Sensor simulation like Cosmos-Drive, a world foundation model enabling photorealistic multi-view driving video generation. Use cases from academic and industrial partners (e.g., Bot Auto, Parallel Domain) will also be presented.
 </p>
 <p>
   Participants will gain a deep understanding of how generative AI and foundation models are reshaping AV simulation—from static, graphics-based engines to intelligent, self-evolving digital twins. The tutorial will benefit researchers, engineers, and policymakers seeking scalable tools for safety validation, bridging the sim-to-real gap and accelerating trustworthy autonomous mobility.
@@ -218,89 +200,9 @@
 </div>
 
 <div class="row">
-
-  <!-- Howie Sun -->
-  <div class="col-xs-6 col-sm-4 col-md-2 speaker-card">
-    <center>
-      <a href="https://www.linkedin.com/in/howie-haowei-sun/" target="_blank">
-        <img class="people-pic" src="./img/people/howie.jpeg" />
-      </a>
-      <div class="people-name">
-        <a href="https://www.linkedin.com/in/howie-haowei-sun/" target="_blank">Howie Sun</a>
-        <h6>SaferDrive AI</h6>
-        <div class="talk-title">TeraSim: Uncovering Unknown Unsafe Events</div>
-      </div>
-    </center>
+  <div class="col-xs-12">
+    <p><i>To be announced.</i></p>
   </div>
-
-  <!-- Shuo Feng -->
-  <div class="col-xs-6 col-sm-4 col-md-2 speaker-card">
-    <center>
-      <a href="https://scholar.google.com/citations?user=kb0Ky3QAAAAJ&hl=en" target="_blank">
-        <img class="people-pic" src="./img/people/shuo.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://scholar.google.com/citations?user=kb0Ky3QAAAAJ&hl=en" target="_blank">Shuo Feng</a>
-        <h6>Tsinghua University</h6>
-        <div class="talk-title">CityNDE: City-Scale Naturalistic Driving Environment</div>
-      </div>
-    </center>
-  </div>
-
-  <!-- Jun Gao -->
-  <div class="col-xs-6 col-sm-4 col-md-2 speaker-card">
-    <center>
-      <a href="https://www.cs.toronto.edu/~jungao/" target="_blank">
-        <img class="people-pic" src="./img/people/jun.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://www.cs.toronto.edu/~jungao/" target="_blank">Jun Gao</a>
-        <h6>University of Michigan / NVIDIA</h6>
-        <div class="talk-title">3D Grounded Generative World Simulator</div>
-      </div>
-    </center>
-  </div>
-
-  <!-- Jiawei Wang -->
-  <div class="col-xs-6 col-sm-4 col-md-2 speaker-card">
-    <center>
-      <a href="https://wjiawei.com/" target="_blank">
-        <img class="people-pic" src="./img/people/jiawei.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://wjiawei.com/" target="_blank">Jiawei Wang</a>
-        <h6>University of Michigan</h6>
-        <div class="talk-title">TeraSim-World: Worldwide Safety-Critical Data Synthesis</div>
-      </div>
-    </center>
-  </div>
-
-  <!-- Xintao Yan -->
-  <div class="col-xs-6 col-sm-4 col-md-2 speaker-card">
-    <center>
-      <a href="https://www.civil.hku.hk/pp-yanxt.html" target="_blank">
-        <img class="people-pic" src="./img/people/xintao.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://www.civil.hku.hk/pp-yanxt.html" target="_blank">Xintao Yan</a>
-        <h6>University of Hong Kong</h6>
-        <div class="talk-title">TeraSim-Agent: LLM-Guided Testing via Crash Reports</div>
-      </div>
-    </center>
-  </div>
-
-  <!-- Yixin Yang -->
-  <div class="col-xs-6 col-sm-4 col-md-2 speaker-card">
-    <center>
-      <div class="initials-pic">YY</div>
-      <div class="people-name">
-        Yixin Yang
-        <h6>Bot Auto</h6>
-        <div class="talk-title">Virtual Testing &amp; Real-World Deployment of Autonomous Trucks</div>
-      </div>
-    </center>
-  </div>
-
 </div>
 
 <br id="schedule" />
@@ -323,62 +225,9 @@
       <tbody>
 
         <tr>
-          <td><b>14:00&ndash;14:15</b></td>
-          <td>
-            <span class="session-tag">Session 1</span>
-            TeraSim: Uncovering Unknown Unsafe Events for Autonomous Driving
-          </td>
-          <td>Howie Sun<br><small>SaferDrive AI</small></td>
-        </tr>
-
-        <tr>
-          <td><b>14:15&ndash;14:45</b></td>
-          <td>
-            <span class="session-tag">Session 2</span>
-            CityNDE: Learning Long-Term City-Scale Naturalistic Driving Environment
-          </td>
-          <td>Shuo Feng<br><small>Tsinghua University</small></td>
-        </tr>
-
-        <tr>
-          <td><b>14:45&ndash;15:15</b></td>
-          <td>
-            <span class="session-tag">Session 3</span>
-            Towards 3D Grounded Generative World Simulator
-          </td>
-          <td>Jun Gao<br><small>University of Michigan / NVIDIA</small></td>
-        </tr>
-
-        <tr class="break-row">
-          <td><b>15:15&ndash;15:30</b></td>
-          <td colspan="2"><i class="fas fa-coffee"></i> &nbsp; Refreshment Break</td>
-        </tr>
-
-        <tr>
-          <td><b>15:30&ndash;16:00</b></td>
-          <td>
-            <span class="session-tag">Session 4</span>
-            TeraSim-World: Worldwide Safety-Critical Data Synthesis Pipeline
-          </td>
-          <td>Jiawei Wang<br><small>University of Michigan</small></td>
-        </tr>
-
-        <tr>
-          <td><b>16:00&ndash;16:30</b></td>
-          <td>
-            <span class="session-tag">Session 5</span>
-            TeraSim-Agent: Crash Report Informed Testing Case Generation via Large Language Models
-          </td>
-          <td>Xintao Yan<br><small>University of Hong Kong</small></td>
-        </tr>
-
-        <tr>
-          <td><b>16:30&ndash;17:00</b></td>
-          <td>
-            <span class="session-tag">Session 6</span>
-            Virtual Testing and Real-World Deployment of Autonomous Trucks
-          </td>
-          <td>Yixin Yang<br><small>Bot Auto</small></td>
+          <td>TBD</td>
+          <td>TBD</td>
+          <td>TBD</td>
         </tr>
 
       </tbody>
@@ -483,7 +332,9 @@
   <li>Feng, S., Yan, X., Sun, H., Feng, Y., &amp; Liu, H. X. (2021). Intelligent driving intelligence test for autonomous vehicles with naturalistic and adversarial environment. <i>Nature Communications</i>, 12(1), 748.</li>
   <li>Sun, H., Yan, X., Qiao, Z., Zhu, H., Sun, Y., Wang, J., ... &amp; Liu, H. X. (2025). TeraSim: Uncovering unknown unsafe events for autonomous vehicles through generative simulation. <i>arXiv preprint arXiv:2503.03629</i>.</li>
   <li>Wang, J., Sun, H., Yan, X., Feng, S., Gao, J., &amp; Liu, H.X. (2025). TeraSim-World: Worldwide safety-critical data synthesis for end-to-end autonomous driving. <i>arXiv preprint arXiv:2509.13164</i>.</li>
+  <li>Ren, X., Lu, Y., Cao, T., Gao, R., Huang, S., Sabour, A., ... &amp; Ling, H. (2025). Cosmos-Drive-Dreams: Scalable synthetic driving data generation with world foundation models. <i>arXiv preprint arXiv:2506.09042</i>.</li>
   <li><b>TeraSim (Code):</b> <a href="https://github.com/mcity/TeraSim" target="_blank">https://github.com/mcity/TeraSim</a></li>
+  <li><b>Cosmos-Drive (Code):</b> <a href="https://github.com/nv-tlabs/Cosmos-Drive-Dreams" target="_blank">https://github.com/nv-tlabs/Cosmos-Drive-Dreams</a></li>
 </ul>
 
       </div>
