@@ -1,358 +1,254 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <meta name="keywords" content="iv2026, ieee iv, tutorial, autonomous driving, generative AI, simulation, TeraSim, digital twins, safety testing, virtual testing">
 
   <title>Generative AI Driven Simulation for Virtual Testing of Autonomous Vehicles | IV 2026 Tutorial</title>
-  <meta name="description" content="Half-day Tutorial at IEEE Intelligent Vehicles Symposium 2026, Detroit, MI">
+  <meta name="description" content="Half-day Tutorial at IEEE Intelligent Vehicles Symposium (IV) 2026, Detroit, MI, June 22–25, 2026.">
+  <meta name="keywords" content="iv2026, ieee iv, tutorial, autonomous driving, generative AI, simulation, TeraSim, digital twins, safety testing, virtual testing, NuRec, Cosmos">
 
-  <!--Open Graph Related Stuff-->
+  <!-- Open Graph -->
   <meta property="og:title" content="Generative AI Driven Simulation for Virtual Testing of Autonomous Vehicles"/>
   <meta property="og:url" content="https://iv2026-tutorial-genai-av-sim.github.io"/>
-  <meta property="og:description" content="Half-day Tutorial at IEEE Intelligent Vehicles Symposium (IV) 2026"/>
-  <meta property="og:site_name" content="Generative AI Driven Simulation for Virtual Testing of Autonomous Vehicles"/>
+  <meta property="og:description" content="Half-day Tutorial at IEEE Intelligent Vehicles Symposium (IV) 2026, Detroit, MI"/>
+  <meta property="og:site_name" content="GenAI AV Sim Tutorial @ IV 2026"/>
 
-  <!--Twitter Card Stuff-->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Generative AI Driven Simulation for Virtual Testing of Autonomous Vehicles"/>
-  <meta name="twitter:url" content="https://iv2026-tutorial-genai-av-sim.github.io/"/>
-  <meta name="twitter:description" content="Half-day Tutorial at IEEE Intelligent Vehicles Symposium (IV) 2026"/>
+  <meta name="twitter:description" content="Half-day Tutorial at IEEE Intelligent Vehicles Symposium (IV) 2026, Detroit, MI"/>
 
-  <!-- CSS  -->
-  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/main.css?1" media="screen,projection">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/ff6e9b10da.js" crossorigin="anonymous"></script>
 
-  <style>
-    .iv-banner {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      padding: 28px 30px;
-      border-radius: 6px;
-      margin-bottom: 10px;
-    }
-    .iv-banner .tutorial-badge {
-      display: inline-block;
-      background: #003087;
-      color: #fff;
-      border-radius: 20px;
-      padding: 4px 16px;
-      font-size: 14px;
-      letter-spacing: 1px;
-      margin-top: 12px;
-    }
-    .iv-logos {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 12px;
-    }
-    .session-tag {
-      display: inline-block;
-      background: #003087;
-      color: #fff;
-      border-radius: 3px;
-      padding: 2px 8px;
-      font-size: 13px;
-      margin-right: 6px;
-      vertical-align: middle;
-    }
-    .break-row td {
-      background: #f5f5f5;
-      font-style: italic;
-      color: #777;
-    }
-    .speaker-card {
-      margin-bottom: 28px;
-    }
-    .speaker-card .people-pic {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-    }
-    .initials-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: #003087;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      font-weight: 300;
-      margin: 0 auto;
-    }
-    .talk-title {
-      font-size: 14px;
-      color: #555;
-      margin-top: 4px;
-      font-style: italic;
-    }
-    h2 {
-      text-align: left !important;
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 
-  <body>
+<body>
 
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/"></a>
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#organizers">Organizers</a></li>
-        <li><a href="#publications">Publications</a></li>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container-xl">
+    <a class="navbar-brand" href="#">
+      <img src="./img/itss-logo.png" alt="IEEE ITSS" style="height:28px; border-radius:50%;" />
+      GenAI AV Sim
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+        <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#organizers">Organizers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
       </ul>
     </div>
   </div>
-</div>
+</nav>
 
 
-    <div class="container">
-      <div class="page-content">
-          <p><br /></p>
-
-<!-- ===== HERO BANNER ===== -->
-<div class="row">
-  <div class="col-xs-12">
-    <div class="iv-banner">
-      <div class="iv-logos">
-        <img src="./img/itss-logo.png" alt="IEEE ITSS" style="height:72px;" />
-        <div style="border-left:2px solid #ccc; height:60px; margin:0 4px;"></div>
-        <div>
-          <div style="font-size:13px; color:#555; letter-spacing:1px; text-transform:uppercase;">IEEE Intelligent Vehicles Symposium</div>
-          <div style="font-size:38px; font-weight:700; color:#003087; line-height:1.1;">IV 2026</div>
-          <div style="font-size:14px; color:#555;">Detroit, MI, United States &nbsp;&middot;&nbsp; June 22&ndash;25, 2026</div>
-        </div>
-      </div>
-      <span class="tutorial-badge">Half-Day Tutorial &nbsp;&middot;&nbsp; In-Person</span>
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="container-xl position-relative">
+    <div class="hero-badge">IV 2026 Tutorial</div>
+    <h1>Generative AI Driven Simulation for<br>Virtual Testing of Autonomous Vehicles</h1>
+    <div class="event-badges">
+      <span class="event-badge"><i class="fa-regular fa-calendar"></i>June 22&ndash;25, 2026</span>
+      <span class="event-badge"><i class="fa-solid fa-location-dot"></i>Detroit, MI, United States</span>
+      <span class="event-badge"><i class="fa-regular fa-clock"></i>Half-Day Tutorial</span>
+    </div>
+    <div class="hero-image-wrap" style="max-width:320px;">
+      <img src="./img/itss-logo.png" alt="IEEE ITSS" style="border-radius:50%; box-shadow:0 24px 64px rgba(0,0,0,0.45); border:3px solid rgba(255,255,255,0.15);" />
     </div>
   </div>
-</div>
+</section>
 
-<br>
-<div class="row">
-  <div class="col-xs-12">
-    <center>
-      <h1>Generative AI Driven Simulation for<br>Virtual Testing of Autonomous Vehicles</h1>
-    </center>
-  </div>
-</div>
-
-<br id="overview" />
-<br>
 
 <!-- ===== OVERVIEW ===== -->
-<h2>Overview</h2>
-<br/>
-<p>
-  Systematic safety validation of autonomous vehicles (AVs) demands exposure to diverse, realistic, and safety-critical scenarios—particularly rare long-tail events that are prohibitively difficult and costly to collect at sufficient scale through real-world operations. This tutorial provides a comprehensive introduction to generative AI–driven simulation for virtual AV testing, tracing the full pipeline from large-scale naturalistic environment modeling to photorealistic sensor synthesis.
-</p>
-<p>
-  We begin with TeraSim, an integrated simulation platform encompassing three tightly coupled capabilities: city-scale naturalistic driving environment modeling with statistical realism, safety-critical scenario synthesis informed by real-world crash data and large language models, and closed-loop virtual testing infrastructure. We then present cutting-edge generative models from NVIDIA—NuRec, which reconstructs photorealistic 3D digital twins from real-world sensor data via 3D Gaussian splatting, and Cosmos, a world foundation model for high-fidelity multi-view driving video generation—that together push the realism frontier of AV simulation.
-</p>
-<p>
-  Through invited talks from leading researchers across academia and industry, this tutorial equips participants with both a conceptual framework and practical knowledge of how generative AI is reshaping AV simulation: from rule-based, graphics-driven environments to data-grounded, continuously evolving digital twins that support rigorous and scalable safety research.
-</p>
+<section class="site-section" id="overview">
+  <div class="container-xl">
+    <div class="section-header">
+      <h2 class="section-title">Overview</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="overview-card">
+      <p>Systematic safety validation of autonomous vehicles (AVs) demands exposure to diverse, realistic, and safety-critical scenarios—particularly rare long-tail events that are prohibitively difficult and costly to collect at sufficient scale through real-world operations. This tutorial provides a comprehensive introduction to generative AI–driven simulation for virtual AV testing, tracing the full pipeline from large-scale naturalistic environment modeling to photorealistic sensor synthesis.</p>
+      <p>The tutorial begins with TeraSim, an integrated simulation platform encompassing three tightly coupled capabilities: city-scale naturalistic driving environment modeling with statistical realism, safety-critical scenario synthesis informed by real-world crash data and large language models, and closed-loop virtual testing infrastructure. The tutorial then covers state-of-the-art generative models from NVIDIA—NuRec, which enables photorealistic digital twin construction via 3D Gaussian reconstruction from real-world sensor data, and Cosmos, a world foundation model for high-fidelity multi-view driving video generation—that together push the realism frontier of AV simulation.</p>
+      <p>Through invited talks from leading researchers across academia and industry, this tutorial equips participants with both a conceptual framework and practical knowledge of how generative AI is reshaping AV simulation: from rule-based, graphics-driven environments to data-grounded, continuously evolving digital twins that support rigorous and scalable safety research.</p>
+    </div>
+  </div>
+</section>
 
-<br>
-<h4>Keywords</h4>
-<ul>
-  <li>Methodological frameworks for safety testing and validation</li>
-  <li>World models and video foundation models for AVs</li>
-  <li>Large language models for scenario generation</li>
-  <li>Naturalistic driving environment modeling with statistical realism</li>
-  <li>Digital twins for virtual testing of autonomous vehicles</li>
-  <li>Adversarial testing and validation frameworks, adversarial attacks, and falsification of AV sub-modules</li>
-  <li>Trustworthy AI to enhance the safety for AVs</li>
-  <li>Real-time SOTIF risk monitoring for AVs</li>
-  <li>Field implementation, simulation, small-scale testbeds, and multi-fidelity (sim-to-real) frameworks</li>
-  <li>Formal methods and runtime verification of AV</li>
-</ul>
-
-<br id="speakers" />
-<br>
-<br>
 
 <!-- ===== SPEAKERS ===== -->
-<div class="row">
-  <div class="col-xs-12">
-    <h2>Speakers</h2><br>
+<section class="site-section bg-alt" id="speakers">
+  <div class="container-xl">
+    <div class="section-header">
+      <h2 class="section-title">Speakers</h2>
+      <div class="section-divider"></div>
+    </div>
+    <p class="text-center text-muted mt-3"><em>To be announced.</em></p>
   </div>
-</div>
+</section>
 
-<div class="row">
-  <div class="col-xs-12">
-    <p><i>To be announced.</i></p>
-  </div>
-</div>
-
-<br id="schedule" />
-<br>
-<br>
 
 <!-- ===== SCHEDULE ===== -->
-<div class="row">
-  <div class="col-xs-12">
-    <h2>Schedule</h2>
-    <br>
-    <table class="table schedule" style="border:none !important;">
-      <thead class="thead-light">
-        <tr>
-          <th>Time</th>
-          <th>Session</th>
-          <th>Speaker</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <tr>
-          <td>TBD</td>
-          <td>TBD</td>
-          <td>TBD</td>
-        </tr>
-
-      </tbody>
-    </table>
+<section class="site-section" id="schedule">
+  <div class="container-xl">
+    <div class="section-header">
+      <h2 class="section-title">Schedule</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="table-responsive">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th style="width:160px;">Time</th>
+            <th>Talk</th>
+            <th style="width:230px;">Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="time-badge">TBD</span></td>
+            <td><div class="talk-title">TBD</div></td>
+            <td><div class="talk-title">TBD</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+</section>
 
-<br id="organizers" />
 
 <!-- ===== ORGANIZERS ===== -->
-<div class="row">
-  <div class="col-xs-12">
-    <h2>Organizers</h2><br>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-
-  <div class="row">
-    <div class="col-xs-4" id="henry">
-      <center>
-      <a href="https://cee.engin.umich.edu/people/liu-henry/" target="_blank">
-        <img class="people-pic" src="./img/people/henry.png" />
-      </a>
-      <div class="people-name">
-        <a href="https://cee.engin.umich.edu/people/liu-henry/" target="_blank">Henry Liu</a>
-        <h6>University of Michigan</h6>
-      </div>
-    </center>
+<section class="site-section bg-alt" id="organizers">
+  <div class="container-xl">
+    <div class="section-header">
+      <h2 class="section-title">Organizers</h2>
+      <div class="section-divider"></div>
     </div>
-    <div class="col-xs-4" id="shuo-org">
-      <center>
-      <a href="https://scholar.google.com/citations?user=kb0Ky3QAAAAJ&hl=en" target="_blank">
-        <img class="people-pic" src="./img/people/shuo.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://scholar.google.com/citations?user=kb0Ky3QAAAAJ&hl=en" target="_blank">Shuo Feng</a>
-        <h6>Tsinghua University</h6>
-      </div>
-    </center>
-    </div>
-    <div class="col-xs-4" id="howie-org">
-      <center>
-      <a href="https://www.linkedin.com/in/howie-haowei-sun/" target="_blank">
-        <img class="people-pic" src="./img/people/howie.jpeg" />
-      </a>
-      <div class="people-name">
-        <a href="https://www.linkedin.com/in/howie-haowei-sun/" target="_blank">Howie Sun</a>
-        <h6>Laplace Intelligence</h6>
-      </div>
-    </center>
-    </div>
-  </div>
+    <div class="row justify-content-center g-2">
 
-  <div class="row">
-    <div class="col-xs-4" id="jun-org">
-      <center>
-      <a href="https://www.cs.toronto.edu/~jungao/" target="_blank">
-        <img class="people-pic" src="./img/people/jun.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://www.cs.toronto.edu/~jungao/" target="_blank">Jun Gao</a>
-        <h6>NVIDIA</h6>
-      </div>
-    </center>
-    </div>
-    <div class="col-xs-4" id="xintao-org">
-      <center>
-      <a href="https://www.civil.hku.hk/pp-yanxt.html" target="_blank">
-        <img class="people-pic" src="./img/people/xintao.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://www.civil.hku.hk/pp-yanxt.html" target="_blank">Xintao Yan</a>
-        <h6>University of Hong Kong</h6>
-      </div>
-    </center>
-    </div>
-    <div class="col-xs-4" id="jiawei-org">
-      <center>
-      <a href="https://wjiawei.com/" target="_blank">
-        <img class="people-pic" src="./img/people/jiawei.jpg" />
-      </a>
-      <div class="people-name">
-        <a href="https://wjiawei.com/" target="_blank">Jiawei Wang</a>
-        <h6>University of Michigan</h6>
-      </div>
-    </center>
-    </div>
-  </div>
-
-</div></div>
-
-<br id="publications" />
-<br>
-
-<!-- ===== PUBLICATIONS ===== -->
-<h2>Related Publications &amp; Resources</h2>
-<br/>
-<ul>
-  <li>Feng, S., Sun, H., Yan, X., Zhu, H., Zou, Z., Shen, S., &amp; Liu, H. X. (2023). Dense reinforcement learning for safety validation of autonomous vehicles. <i>Nature</i>, 615(7953), 620&ndash;627.</li>
-  <li>Feng, S., Zhu, H., Sun, H., Yan, X., He, L., Yang, J., Su, G., Li, B., Li, S., Wang, L., Shen, S., &amp; Liu, H. X. (2026). Breaking through safety performance stagnation in autonomous vehicles with dense learning. <i>Nature Communications</i>, 17, 3163.</li>
-  <li>Yan, X., Zou, Z., Feng, S., Zhu, H., Sun, H., &amp; Liu, H. X. (2023). Learning naturalistic driving environment with statistical realism. <i>Nature Communications</i>, 14(1), 2037.</li>
-  <li>Feng, S., Yan, X., Sun, H., Feng, Y., &amp; Liu, H. X. (2021). Intelligent driving intelligence test for autonomous vehicles with naturalistic and adversarial environment. <i>Nature Communications</i>, 12(1), 748.</li>
-  <li>Sun, H., Yan, X., Qiao, Z., Zhu, H., Sun, Y., Wang, J., ... &amp; Liu, H. X. (2025). TeraSim: Uncovering unknown unsafe events for autonomous vehicles through generative simulation. <i>arXiv preprint arXiv:2503.03629</i>.</li>
-  <li>Wang, J., Sun, H., Yan, X., Feng, S., Gao, J., &amp; Liu, H.X. (2025). TeraSim-World: Worldwide safety-critical data synthesis for end-to-end autonomous driving. <i>arXiv preprint arXiv:2509.13164</i>.</li>
-  <li>Ren, X., Lu, Y., Cao, T., Gao, R., Huang, S., Sabour, A., ... &amp; Ling, H. (2025). Cosmos-Drive-Dreams: Scalable synthetic driving data generation with world foundation models. <i>arXiv preprint arXiv:2506.09042</i>.</li>
-  <li><b>TeraSim (Code):</b> <a href="https://github.com/mcity/TeraSim" target="_blank">https://github.com/mcity/TeraSim</a></li>
-  <li><b>Cosmos-Drive (Code):</b> <a href="https://github.com/nv-tlabs/Cosmos-Drive-Dreams" target="_blank">https://github.com/nv-tlabs/Cosmos-Drive-Dreams</a></li>
-</ul>
-
-      </div>
-    </div>
-
-    <div class="section text-gray" id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 text-right">
-            <p style="text-align: right;"><small>&copy; 2026 IV 2026 Tutorial Organizers.
-            Template by <a href="https://nvlabs.github.io/eccv2020-limited-labels-data-tutorial/" class="external"> Shalini De Mello</a>.</small></p>
-          </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="organizer-card">
+          <a href="https://cee.engin.umich.edu/people/liu-henry/" target="_blank" rel="noopener">
+            <img class="organizer-photo" src="./img/people/henry.png" alt="Henry Liu" />
+          </a>
+          <div class="organizer-name"><a href="https://cee.engin.umich.edu/people/liu-henry/" target="_blank" rel="noopener">Henry Liu</a></div>
+          <div class="organizer-affil">University of Michigan</div>
         </div>
       </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="organizer-card">
+          <a href="https://scholar.google.com/citations?user=kb0Ky3QAAAAJ&hl=en" target="_blank" rel="noopener">
+            <img class="organizer-photo" src="./img/people/shuo.jpg" alt="Shuo Feng" />
+          </a>
+          <div class="organizer-name"><a href="https://scholar.google.com/citations?user=kb0Ky3QAAAAJ&hl=en" target="_blank" rel="noopener">Shuo Feng</a></div>
+          <div class="organizer-affil">Tsinghua University</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="organizer-card">
+          <a href="https://www.linkedin.com/in/howie-haowei-sun/" target="_blank" rel="noopener">
+            <img class="organizer-photo" src="./img/people/howie.jpeg" alt="Howie Sun" />
+          </a>
+          <div class="organizer-name"><a href="https://www.linkedin.com/in/howie-haowei-sun/" target="_blank" rel="noopener">Howie Sun</a></div>
+          <div class="organizer-affil">Laplace Intelligence</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="organizer-card">
+          <a href="https://www.cs.toronto.edu/~jungao/" target="_blank" rel="noopener">
+            <img class="organizer-photo" src="./img/people/jun.jpg" alt="Jun Gao" />
+          </a>
+          <div class="organizer-name"><a href="https://www.cs.toronto.edu/~jungao/" target="_blank" rel="noopener">Jun Gao</a></div>
+          <div class="organizer-affil">NVIDIA</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="organizer-card">
+          <a href="https://www.civil.hku.hk/pp-yanxt.html" target="_blank" rel="noopener">
+            <img class="organizer-photo" src="./img/people/xintao.jpg" alt="Xintao Yan" />
+          </a>
+          <div class="organizer-name"><a href="https://www.civil.hku.hk/pp-yanxt.html" target="_blank" rel="noopener">Xintao Yan</a></div>
+          <div class="organizer-affil">University of Hong Kong</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="organizer-card">
+          <a href="https://wjiawei.com/" target="_blank" rel="noopener">
+            <img class="organizer-photo" src="./img/people/jiawei.jpg" alt="Jiawei Wang" />
+          </a>
+          <div class="organizer-name"><a href="https://wjiawei.com/" target="_blank" rel="noopener">Jiawei Wang</a></div>
+          <div class="organizer-affil">University of Michigan</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PUBLICATIONS ===== -->
+<section class="site-section" id="publications">
+  <div class="container-xl">
+    <div class="section-header">
+      <h2 class="section-title">Related Publications &amp; Resources</h2>
+      <div class="section-divider"></div>
     </div>
 
-    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-  </body>
+    <div class="resource-links">
+      <a class="resource-btn" href="https://github.com/mcity/TeraSim" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>TeraSim
+      </a>
+      <a class="resource-btn" href="https://github.com/nv-tlabs/Cosmos-Drive-Dreams" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>Cosmos-Drive
+      </a>
+    </div>
+
+    <ul class="pub-list">
+      <li>Feng, S., Zhu, H., Sun, H., Yan, X., He, L., Yang, J., Su, G., Li, B., Li, S., Wang, L., Shen, S., &amp; Liu, H. X. (2026). Breaking through safety performance stagnation in autonomous vehicles with dense learning. <em>Nature Communications</em>, 17, 3163.</li>
+      <li>Wang, J., Sun, H., Yan, X., Feng, S., Gao, J., &amp; Liu, H.X. (2025). TeraSim-World: Worldwide safety-critical data synthesis for end-to-end autonomous driving. <em>arXiv preprint arXiv:2509.13164</em>.</li>
+      <li>Sun, H., Yan, X., Qiao, Z., Zhu, H., Sun, Y., Wang, J., ... &amp; Liu, H. X. (2025). TeraSim: Uncovering unknown unsafe events for autonomous vehicles through generative simulation. <em>arXiv preprint arXiv:2503.03629</em>.</li>
+      <li>Ren, X., Lu, Y., Cao, T., Gao, R., Huang, S., Sabour, A., ... &amp; Ling, H. (2025). Cosmos-Drive-Dreams: Scalable synthetic driving data generation with world foundation models. <em>arXiv preprint arXiv:2506.09042</em>.</li>
+      <li>Yan, X., Zou, Z., Feng, S., Zhu, H., Sun, H., &amp; Liu, H. X. (2023). Learning naturalistic driving environment with statistical realism. <em>Nature Communications</em>, 14(1), 2037.</li>
+      <li>Feng, S., Sun, H., Yan, X., Zhu, H., Zou, Z., Shen, S., &amp; Liu, H. X. (2023). Dense reinforcement learning for safety validation of autonomous vehicles. <em>Nature</em>, 615(7953), 620&ndash;627.</li>
+      <li>Feng, S., Yan, X., Sun, H., Feng, Y., &amp; Liu, H. X. (2021). Intelligent driving intelligence test for autonomous vehicles with naturalistic and adversarial environment. <em>Nature Communications</em>, 12(1), 748.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="container-xl">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <span>&copy; 2026 IV 2026 Tutorial Organizers.</span>
+      <span>Template inspired by <a href="https://nvlabs.github.io/eccv2020-limited-labels-data-tutorial/" target="_blank" rel="noopener">Shalini De Mello</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
