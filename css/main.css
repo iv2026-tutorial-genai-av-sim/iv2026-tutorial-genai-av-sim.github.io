@@ -351,8 +351,8 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
 .organizer-card:hover { background: var(--bg-white); }
 
 .organizer-photo {
-  width: 96px;
-  height: 96px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--border-color);
@@ -443,14 +443,24 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
 #footer a:hover { color: rgba(255,255,255,0.9); text-decoration: none; }
 
 /* ===== Schedule inline speaker ===== */
+.sched-content { display: flex; flex-direction: column; gap: 0.75rem; }
 .sched-speaker {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+.sched-speaker > a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: 0;
 }
 .sched-photo {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border-color);
@@ -460,6 +470,8 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
 .schedule-table tbody tr:hover .sched-photo {
   border-color: var(--blue-accent);
 }
+.sched-speaker .talk-title { margin-bottom: 0.15rem; }
+.sched-speaker .talk-meta { font-size: 0.82rem; }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
