@@ -1,17 +1,17 @@
 /* ===== CSS Custom Properties ===== */
 :root {
-  --navy-deep: #0d1b2a;
-  --navy-mid: #1a2e4a;
-  --navy-light: #243b55;
-  --blue-accent: #3b82f6;
-  --blue-light: #60a5fa;
-  --teal-accent: #06b6d4;
+  --navy-deep: #0a1f2e;
+  --navy-mid: #123347;
+  --navy-light: #1b4a5e;
+  --blue-accent: #1d8fcf;
+  --blue-light: #4db8e8;
+  --teal-accent: #14b8a6;
   --bg-white: #ffffff;
-  --bg-light: #f1f5f9;
-  --bg-lighter: #f8fafc;
-  --text-primary: #1e293b;
-  --text-muted: #64748b;
-  --border-color: #e2e8f0;
+  --bg-light: #eef4f6;
+  --bg-lighter: #f6fafb;
+  --text-primary: #16242e;
+  --text-muted: #5b7080;
+  --border-color: #d9e6ea;
   --card-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
   --card-shadow-hover: 0 20px 25px -5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.06);
 }
@@ -95,7 +95,7 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
 
 /* ===== Hero ===== */
 #hero {
-  background: linear-gradient(145deg, var(--navy-deep) 0%, var(--navy-mid) 65%, var(--navy-light) 100%);
+  background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy-mid) 55%, var(--navy-light) 100%);
   color: white;
   padding: 96px 0 80px;
   text-align: center;
@@ -108,15 +108,15 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 70% 25%, rgba(59,130,246,0.13) 0%, transparent 55%),
-    radial-gradient(ellipse at 25% 75%, rgba(6,182,212,0.09) 0%, transparent 55%);
+    radial-gradient(ellipse at 72% 18%, rgba(29,143,207,0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 22% 82%, rgba(20,184,166,0.16) 0%, transparent 55%);
   pointer-events: none;
 }
 
 .hero-badge {
   display: inline-block;
-  background: rgba(59,130,246,0.18);
-  border: 1px solid rgba(59,130,246,0.38);
+  background: rgba(29,143,207,0.18);
+  border: 1px solid rgba(29,143,207,0.38);
   color: var(--blue-light);
   font-size: 0.75rem;
   font-weight: 600;
@@ -269,7 +269,7 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--blue-accent);
-  background: rgba(59,130,246,0.08);
+  background: rgba(29,143,207,0.08);
   padding: 0.2rem 0.65rem;
   border-radius: 100px;
   margin-bottom: 0.75rem;
@@ -310,7 +310,7 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
 }
 .schedule-table tbody tr:last-child { border-bottom: none; }
 .schedule-table tbody tr:nth-child(even) { background: var(--bg-lighter); }
-.schedule-table tbody tr:hover { background: rgba(59,130,246,0.04); }
+.schedule-table tbody tr:hover { background: rgba(29,143,207,0.04); }
 .schedule-table tbody td {
   padding: 1.1rem 1.25rem;
   vertical-align: middle;
@@ -319,7 +319,7 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
 
 .time-badge {
   display: inline-block;
-  background: rgba(59,130,246,0.1);
+  background: rgba(29,143,207,0.1);
   color: var(--blue-accent);
   font-size: 0.78rem;
   font-weight: 600;
@@ -415,8 +415,8 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(59,130,246,0.08);
-  border: 1px solid rgba(59,130,246,0.22);
+  background: rgba(29,143,207,0.08);
+  border: 1px solid rgba(29,143,207,0.22);
   padding: 0.45rem 1rem;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -425,7 +425,7 @@ a:hover { color: var(--blue-light); text-decoration: underline; }
   transition: background 0.15s, border-color 0.15s;
 }
 .resource-btn:hover {
-  background: rgba(59,130,246,0.15);
+  background: rgba(29,143,207,0.15);
   border-color: var(--blue-accent);
   text-decoration: none;
   color: var(--blue-accent);
